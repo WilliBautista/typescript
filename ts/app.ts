@@ -63,3 +63,34 @@ console.log('---------------- Function type');
 console.log(sum1(10, 60));
 console.log(salute1("William"));
 saveWorld1();
+
+// Objects with interfaces
+interface Young {
+    name:string,
+    age:number,
+    skills:string[],
+    getData:()=>string
+}
+
+let young:Young = {
+    name: 'William Bautista',
+    age: 21,
+    skills: ['JavaScript', 'TypeScript', 'Angular', 'Css', 'Html5'],
+    getData: function() {
+        return `${ this.name } tiene ${ this.age } y sabe ${ this.skills.join(', ') }`
+    }
+}
+
+console.log('---------------- Objects with interfaces');
+console.log(young.getData());
+
+// Multiple types allowed
+let anything:string|number|boolean;
+
+anything = true;
+anything = 25;
+anything = "string";
+
+console.log('---------------- Multiple types allowed');
+console.log(anything);
+
