@@ -87,10 +87,53 @@ console.log(young.getData());
 // Multiple types allowed
 let anything:string|number|boolean;
 
-anything = true;
-anything = 25;
-anything = "string";
-
 console.log('---------------- Multiple types allowed');
+anything = true;
 console.log(anything);
+console.log('anything: ', typeof anything);
+anything = 25;
+console.log(anything);
+console.log('anything: ', typeof anything);
+anything = "¡¡Hola Mundo!!";
+console.log(anything);
+console.log('anything: ', typeof anything);
 
+// Destructuring an object
+// interface Avenger {
+//     nick:string,
+//     ironman:string,
+//     vision:string
+// }
+// let avengers:Avenger = {
+//     nick: 'Samuel Jackson',
+//     ironman: 'Robert Downey Jr',
+//     vision: 'Paul Bettany'
+// }
+// // Change name of variable with :
+// let { nick, ironman:warmachine, vision } = avengers;
+
+// console.log(nick);
+// console.log(warmachine);
+// console.log(vision);
+// console.log(avengers);
+
+// For...of
+let hulk = {
+        name: 'Hulk',
+        weapon: 'Arms'
+    },
+    ironman = {
+        name: 'Ironman',
+        weapon: 'Armorsuit'
+    },
+    thor = {
+        name: 'Thor',
+        weapon: 'Mjolnir'
+    }
+
+let avengers_s = [ hulk, ironman, thor ]
+
+console.log('---------------- For...of');
+for (const avenger of avengers_s) {
+    console.log(avenger.name, avenger.weapon);
+}
