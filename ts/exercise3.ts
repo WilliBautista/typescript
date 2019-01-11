@@ -1,4 +1,3 @@
-
 // Objetos
 interface Batimovil {
   carroceria:string,
